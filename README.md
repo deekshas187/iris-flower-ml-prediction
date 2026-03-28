@@ -99,11 +99,3 @@ Predicted Species: Setosa
 
 This project is licensed under the **MIT License**.
 
-```
-
----
-
-If you want, I can **:contentReference[oaicite:0]{index=0}** showing the form and prediction in the README so it looks **more professional on GitHub**.  
-
-Do you want me to add that too?
-```
