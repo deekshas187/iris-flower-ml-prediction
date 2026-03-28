@@ -2,20 +2,89 @@
 <html>
 <head>
     <title>Iris Predictor</title>
+    <style>
+        /* Body styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom right, #f3e5f5, #e1bee7); /* soft iris theme */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Form container */
+        .container {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #6a1b9a; /* deep purple iris color */
+            margin-bottom: 25px;
+        }
+
+        /* Input fields */
+        input[type="text"] {
+            width: 80%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #ce93d8;
+            border-radius: 8px;
+            outline: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #7b1fa2;
+            box-shadow: 0 0 8px #ce93d8;
+        }
+
+        /* Button styling */
+        button {
+            background-color: #8e24aa;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #6a1b9a;
+        }
+
+        /* Result display */
+        h3 {
+            margin-top: 25px;
+            color: #4a148c;
+        }
+    </style>
 </head>
 <body>
-    <h2>Iris Flower Prediction</h2>
+    <div class="container">
+        <h2>Iris Flower Prediction</h2>
 
-    <form action="/predict" method="POST">
-        <input type="text" name="sepal_length" placeholder="Sepal Length" required><br><br>
-        <input type="text" name="sepal_width" placeholder="Sepal Width" required><br><br>
-        <input type="text" name="petal_length" placeholder="Petal Length" required><br><br>
-        <input type="text" name="petal_width" placeholder="Petal Width" required><br><br>
-        <button type="submit">Predict</button>
-    </form>
+        <form action="/predict" method="POST">
+            <input type="text" name="sepal_length" placeholder="Sepal Length" required><br>
+            <input type="text" name="sepal_width" placeholder="Sepal Width" required><br>
+            <input type="text" name="petal_length" placeholder="Petal Length" required><br>
+            <input type="text" name="petal_width" placeholder="Petal Width" required><br>
+            <button type="submit">Predict</button>
+        </form>
 
-    {% if result %}
-        <h3>Predicted Flower: {{ result }}</h3>
-    {% endif %}
+        {% if result %}
+            <h3>Predicted Flower: {{ result }}</h3>
+        {% endif %}
+    </div>
 </body>
 </html>
