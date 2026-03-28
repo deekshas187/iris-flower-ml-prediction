@@ -2,7 +2,6 @@
 
 ![Python](https://img.shields.io/badge/Python-3.13-blue)
 ![Flask](https://img.shields.io/badge/Flask-2.x-orange)
-![License](https://img.shields.io/badge/License-MIT-green)
 
 ## Description
 This project predicts the species of an Iris flower (**Setosa, Versicolor, Virginica**) based on its **sepal length, sepal width, petal length, and petal width**.  
@@ -94,8 +93,3 @@ http://127.0.0.1:5000
 ```
 Predicted Species: Setosa
 ```
-
-## License
-
-This project is licensed under the **MIT License**.
-
